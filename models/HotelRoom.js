@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+jest.setTimeout(50000);
 
 // Connect to MongoDB
 const dbURI = "mongodb://localhost:27017/test";

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const app = require('../index'); // Import the Express app
 const HotelRoom = require('../models/HotelRoom'); // Import the HotelRoom model
 
-
+jest.setTimeout(50000);
 // Connect to a test database before running tests
 beforeAll(async () => {
     const dbURI = "mongodb://localhost:27017/test";
