@@ -4,17 +4,12 @@ const app = require('../index'); // Import the Express app
 const HotelRoom = require('../models/HotelRoom'); // Import the HotelRoom model
 
 
+// Connect to a test database before running tests
 beforeAll(async () => {
-    jest.setTimeout(30000);
-    
-    const dbURI = "mongodb://mongo:27017/test";
+    const dbURI = "mongodb://localhost:27017/test";
     await mongoose.connect(dbURI);
-    
-    await new Promise(resolve => setTimeout(resolve, 5000));  // Wait 5 seconds
-    
     await HotelRoom.deleteMany();
-  });
-  
+});
 
 // Setup: Insert specific rooms into the database before each test
 beforeEach(async () => {
