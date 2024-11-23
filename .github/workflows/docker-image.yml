@@ -23,8 +23,8 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t remydmk1/api-testing-app:latest .
-          docker tag remydmk1/api-testing-app:latest remydmk1/api-testing-app:latest
+          docker build -t remydmk1/tp2:latest .
+          docker tag remydmk1/tp2:latest remydmk1/tp2:latest
 
       - name: Push Docker image to DockerHub
-        run: docker push remydmk1/api-testing-app:latest
+        run: docker push remydmk1/tp2:latest
