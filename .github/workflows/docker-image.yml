@@ -10,6 +10,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,8 +23,8 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t remydmk1/api-testing-app:latest .
-          docker tag remydmk1/api-testing-app:latest remydmk1/api-testing-app:latest
+          docker build -t remydmk/api-testing-app:latest .
+          docker tag remydmk/api-testing-app:latest remydmk/api-testing-app:latest
 
       - name: Push Docker image to DockerHub
-        run: docker push remydmk1/api-testing-app:latest
+        run: docker push remydmk/api-testing-app:latest
