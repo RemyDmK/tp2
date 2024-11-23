@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 
-jest.setTimeout(50000);
-
 // Connect to MongoDB
-const dbURI = "mongodb://localhost:27017/test";
+const dbURI = "mongodb+srv://remydimachkie:WtszfpEJYPjDGwj1@cluster0.znubu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 mongoose.connect(dbURI)
     .then(() => console.log('Connected to MongoDB'))
